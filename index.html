@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Drywall Project Engineering & Management System (DPEMS) — enterprise-ready modular architecture." />
+    <title>DPEMS — Drywall Project Engineering & Management System</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="topbar">
+      <div class="topbar__inner">
+        <button class="icon-btn" id="menuBtn" aria-label="Open menu" aria-controls="sidebar" aria-expanded="false">
+          <span class="icon-btn__bars" aria-hidden="true"></span>
+        </button>
+
+        <div class="brand">
+          <div class="brand__mark" aria-hidden="true">D</div>
+          <div class="brand__text">
+            <div class="brand__name">DPEMS</div>
+            <div class="brand__tag">Drywall Project Engineering & Management System</div>
+          </div>
+        </div>
+
+        <div class="topbar__right">
+          <span class="pill pill--ok" id="statusPill">Static Site</span>
+          <a class="btn btn--primary" href="#get-started" data-nav>Get Started</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="shell">
+      <aside class="sidebar" id="sidebar" aria-label="Primary">
+        <div class="sidebar__section">
+          <div class="sidebar__title">Core</div>
+          <nav class="nav" aria-label="Sections">
+            <a class="nav__link is-active" href="#overview" data-nav>Overview</a>
+            <a class="nav__link" href="#architecture" data-nav>Architecture</a>
+            <a class="nav__link" href="#modules" data-nav>Modules</a>
+            <a class="nav__link" href="#roles" data-nav>Roles</a>
+            <a class="nav__link" href="#errors" data-nav>Error Strategy</a>
+            <a class="nav__link" href="#roadmap" data-nav>Roadmap</a>
+            <a class="nav__link" href="#get-started" data-nav>Get Started</a>
+          </nav>
+        </div>
+
+        <div class="sidebar__section">
+          <div class="sidebar__title">Focus Areas</div>
+          <div class="mini-grid">
+            <div class="mini-card">
+              <div class="mini-card__k">Validation</div>
+              <div class="mini-card__v">Server-first rules</div>
+            </div>
+            <div class="mini-card">
+              <div class="mini-card__k">Modularity</div>
+              <div class="mini-card__v">Domain isolation</div>
+            </div>
+            <div class="mini-card">
+              <div class="mini-card__k">Auditability</div>
+              <div class="mini-card__v">Transactions over mutations</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar__footer">
+          <div class="muted">Enterprise-ready • Flexible • Expandable</div>
+        </div>
+      </aside>
+
+      <main class="main" id="main" tabindex="-1">
+        <section class="hero" id="overview">
+          <div class="hero__content">
+            <h1>Build, validate, estimate, cost, procure, and control drywall projects — the enterprise way.</h1>
+            <p class="lead">
+              DPEMS is designed as a scalable, modular system with strict validation, error control, and clear domain boundaries.
+              This static site is the blueprint and UI shell for a production-grade implementation.
+            </p>
+            <div class="hero__cta">
+              <a class="btn btn--primary" href="#architecture" data-nav>View Architecture</a>
+              <a class="btn btn--ghost" href="#modules" data-nav>Explore Modules</a>
+            </div>
+
+            <div class="kpis">
+              <div class="kpi">
+                <div class="kpi__n">3</div>
+                <div class="kpi__l">Tiers</div>
+              </div>
+              <div class="kpi">
+                <div class="kpi__n">10</div>
+                <div class="kpi__l">Domains</div>
+              </div>
+              <div class="kpi">
+                <div class="kpi__n">RBAC</div>
+                <div class="kpi__l">JWT Roles</div>
+              </div>
+              <div class="kpi">
+                <div class="kpi__n">TXN</div>
+                <div class="kpi__l">Inventory Model</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero__panel" aria-label="System snapshot">
+            <div class="panel">
+              <div class="panel__head">
+                <div class="panel__title">Production-grade Principles</div>
+                <span class="pill pill--info">Blueprint</span>
+              </div>
+              <ul class="checklist">
+                <li><span class="check"></span>Backend validation is authoritative</li>
+                <li><span class="check"></span>Domain modules are isolated</li>
+                <li><span class="check"></span>Calculation engines are testable services</li>
+                <li><span class="check"></span>Transaction-based inventory control</li>
+                <li><span class="check"></span>PDF generation server-side (BOQ, tender docs)</li>
+              </ul>
+              <div class="panel__foot">
+                <div class="muted">Use this UI shell as your starting point for a full product.</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="architecture">
+          <div class="section__head">
+            <h2>3-Tier Architecture (SaaS-ready)</h2>
+            <p>Separation of concerns, strong validation layers, and clean scalability boundaries.</p>
+          </div>
+
+          <div class="cards">
+            <article class="card">
+              <h3>Frontend</h3>
+              <p class="muted">React (future). For now: this static UI shell (HTML/CSS/JS).</p>
+              <div class="card__meta">
+                <span class="pill">Forms</span>
+                <span class="pill">Dashboards</span>
+                <span class="pill">RBAC UI</span>
+              </div>
+            </article>
+
+            <article class="card">
+              <h3>Backend API</h3>
+              <p class="muted">Node.js / NestJS. Authoritative validation, workflows, engines.</p>
+              <div class="card__meta">
+                <span class="pill">Zod/Joi</span>
+                <span class="pill">JWT</span>
+                <span class="pill">Swagger</span>
+              </div>
+            </article>
+
+            <article class="card">
+              <h3>PostgreSQL Database</h3>
+              <p class="muted">Structured domain tables + enums + audit trails.</p>
+              <div class="card__meta">
+                <span class="pill">TypeORM</span>
+                <span class="pill">Migrations</span>
+                <span class="pill">Constraints</span>
+              </div>
+            </article>
+          </div>
+
+          <div class="diagram" role="img" aria-label="Three tier diagram">
+            <div class="diagram__box">Frontend</div>
+            <div class="diagram__arrow">↓</div>
+            <div class="diagram__box">Backend API</div>
+            <div class="diagram__arrow">↓</div>
+            <div class="diagram__box">PostgreSQL</div>
+          </div>
+        </section>
+
+        <section class="section" id="modules">
+          <div class="section__head">
+            <h2>Modular Domain Structure</h2>
+            <p>Each domain is isolated for maintainability and expansion.</p>
+          </div>
+
+          <div class="module-grid" id="moduleGrid">
+            <!-- Populated by JS -->
+          </div>
+        </section>
+
+        <section class="section" id="roles">
+          <div class="section__head">
+            <h2>User Roles (RBAC)</h2>
+            <p>JWT authentication + role-based access control across modules.</p>
+          </div>
+
+          <div class="table-wrap">
+            <table class="table" aria-label="Role based access control">
+              <thead>
+                <tr>
+                  <th>Role</th>
+                  <th>Access</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="pill pill--ok">Admin</span></td>
+                  <td>All modules</td>
+                </tr>
+                <tr>
+                  <td><span class="pill">Engineer</span></td>
+                  <td>Engineering + Estimation</td>
+                </tr>
+                <tr>
+                  <td><span class="pill">QS</span></td>
+                  <td>Cost + BOQ</td>
+                </tr>
+                <tr>
+                  <td><span class="pill">Procurement</span></td>
+                  <td>Purchase workflows</td>
+                </tr>
+                <tr>
+                  <td><span class="pill">Store Keeper</span></td>
+                  <td>Inventory management</td>
+                </tr>
+                <tr>
+                  <td><span class="pill">Viewer</span></td>
+                  <td>Read-only</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="section" id="errors">
+          <div class="section__head">
+            <h2>Error Management Strategy</h2>
+            <p>Frontend assists the user. Backend guarantees correctness.</p>
+          </div>
+
+          <div class="cards">
+            <article class="card">
+              <h3>Frontend Validation</h3>
+              <ul class="bullets">
+                <li>Required fields</li>
+                <li>Numeric constraints</li>
+                <li>Real-time feedback</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <h3>Backend Validation (Critical)</h3>
+              <ul class="bullets">
+                <li>Opening area ≤ wall area</li>
+                <li>Height within structural limits</li>
+                <li>Rates &gt; 0</li>
+                <li>Stock availability before issuing</li>
+              </ul>
+              <div class="card__meta">
+                <span class="pill">Zod</span>
+                <span class="pill">Joi</span>
+                <span class="pill">DB constraints</span>
+              </div>
+            </article>
+
+            <article class="card">
+              <h3>Logging & Observability</h3>
+              <ul class="bullets">
+                <li>Structured API error responses</li>
+                <li>Centralized logs</li>
+                <li>Sentry for client/server errors</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" id="roadmap">
+          <div class="section__head">
+            <h2>Development Roadmap</h2>
+            <p>Phase-driven delivery from core to SaaS.</p>
+          </div>
+
+          <div class="timeline" id="timeline">
+            <!-- Populated by JS -->
+          </div>
+        </section>
+
+        <section class="section" id="get-started">
+          <div class="section__head">
+            <h2>Get Started (Static)</h2>
+            <p>Open this site locally. Later, wire it to a backend API.</p>
+          </div>
+
+          <div class="cards">
+            <article class="card">
+              <h3>Local Usage</h3>
+              <ol class="steps">
+                <li>Open <code>BOQ/static-site/index.html</code> in a browser</li>
+                <li>Use the sidebar to navigate sections</li>
+                <li>Edit <code>app.js</code> data arrays to expand content</li>
+              </ol>
+            </article>
+
+            <article class="card">
+              <h3>Next Upgrade Path</h3>
+              <ol class="steps">
+                <li>Keep UI shell, replace data with API calls</li>
+                <li>Add auth screens + JWT storage</li>
+                <li>Add module pages: projects/engineering/estimation...</li>
+              </ol>
+            </article>
+          </div>
+
+          <div class="callout">
+            <div class="callout__title">Connection Note</div>
+            <div class="callout__body">
+              This static site does not require Node/npm. If you want backend connectivity later, install Node.js and run an API server.
+            </div>
+          </div>
+        </section>
+
+        <footer class="footer">
+          <div class="footer__inner">
+            <div>
+              <div class="footer__brand">DPEMS</div>
+              <div class="muted">Enterprise-ready blueprint UI (HTML/CSS/JS only)</div>
+            </div>
+            <div class="muted">© <span id="year"></span> DPEMS</div>
+          </div>
+        </footer>
+      </main>
+
+      <div class="backdrop" id="backdrop" aria-hidden="true"></div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
